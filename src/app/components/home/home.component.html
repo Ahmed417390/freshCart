@@ -46,7 +46,7 @@
             @for (product of productList.slice(0,12) ; track product._id) {
                 <div class="col-md-2">
                     <div class="product shadow rounded-4 p-2 position-relative">
-                        <div class="wishI position-absolute" ><i class="fa-regular fa-heart fa-2x  top-0"></i></div>
+                        <div class="wishI position-absolute" (click)="AddProductToWish(product._id)"><i class="fa-regular fa-heart fa-2x  top-0"></i></div>
                         <div [routerLink]="['/details',product._id]">
                             <img [src]="product.imageCover" class="w-100"  [alt]="product.title">
                             <h3 class="h6 text-main">{{product.category.name}}</h3>
